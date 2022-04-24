@@ -1,6 +1,10 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from apkInfo import *
+import sys
+
 import requests
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+from apkInfo import *
+
 
 # make package size human readable
 def sizeof_fmt(num, suffix='B'):
@@ -219,7 +223,7 @@ class Ui_MainWindow(object):
 	# apk download function
 	def down(self):
 		self.status.clear()
-		self.status.setText("working...")
+		self.status.setText("Downloading...")
 		url = 'https://api.cafebazaar.ir'
 		downloads_url = '/rest-v1/process/AppDetailsV2Request'
 
@@ -315,7 +319,6 @@ class Ui_MainWindow(object):
 
 
 if __name__ == "__main__":
-	import sys
 	app = QtWidgets.QApplication(sys.argv)
 	MainWindow = QtWidgets.QMainWindow()
 	ui = Ui_MainWindow()

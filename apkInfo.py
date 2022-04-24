@@ -1,4 +1,6 @@
-import urllib3, json, re
+import json
+
+import urllib3
 
 url = 'https://api.cafebazaar.ir'
 app_detail_url = '/rest-v1/process/AppDetailsV2Request'
